@@ -1,0 +1,4 @@
+repository "7Bridges"
+  path "/"
+    br "/main"
+    co "/main"
