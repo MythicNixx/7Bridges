@@ -24,27 +24,14 @@ public class CharacterHealth : MonoBehaviour
 
     void Update()
     {
-        //resets the flag so damage can be taken again
-        damaged = false;
-    }
+        currentHealth = (int) healthSlider.value;
 
-    public void TakeDamage()
-    {
-        //set flag for damage taken
-        damaged = true;
-
-        currentHealth -= 1;
-
-        healthSlider.value = currentHealth;
-
-        // ensures that when player dies, death method runs
-        if (currentHealth <= 0 && !isDead)
+        if (currentHealth <= 0)
         {
             Death();
         }
     }
 
-    // Removes player movement and any other functions related to player
     void Death()
     {
         isDead = true;

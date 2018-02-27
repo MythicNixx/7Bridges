@@ -8,9 +8,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 4;
+    public float speed = 4;
     private Vector3 moveInput;
     private Vector3 moveVel;
+    public bool firstAlly;
+
+    private void Awake()
+    {
+        firstAlly = true;
+    }
 
     void FixedUpdate()
     {
